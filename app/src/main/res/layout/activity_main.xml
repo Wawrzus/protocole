@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="clearWykonawcaSignature"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/DataProtokoluTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Data"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/DataProtokoluEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/NumerProtokoluTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Numer protokołu usługi serwisowej"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/NumerProtokoluEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/KopalniaTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Kopalnia"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/KopalniaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/UrzadzenieTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Urządzenie"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TypTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="a) typ i numer"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/TypEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/MiejsceTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Miejsce zabudowy"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/MiejsceEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/ZgloszenieTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Zgłoszenie przez kopalnię"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ZgloszenieEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/OsobaTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="a) osoba zgłaszająca"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/OsobaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/DataTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="b) data i przyczyna zgłoszenia"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/DataEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/UszkodzeniaTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. Uszkodzenia urządzenia stwierdzone przez pracowników serwisu"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/UszkodzeniaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/CzynnosciTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. Wykonane czynności podczas serwisu"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/CzynnosciEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/PodzespolyTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7. Wymienione podzespoły"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/PodzespolyEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/ParametryTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8. Parametry pracy urządzenia "
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/SsanieTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="a) ciśnienie ssania (Bar)"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/SsanieEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/OlejuTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="b) ciśnienie oleju (Bar)"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/OlejuEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/SprezaniaTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="c) ciśnienie sprężania (Bar)"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/SprezaniaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/FreonuTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="d) temp. freonu (℃)"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/FreonuEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/PrzegrzaniaTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="e) temp. przegrzania (℃)"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/PrzegrzaniaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/WydatekTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="f) wydatek wody chłodzącej (1/min)"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/WydatekEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/SkraplaczTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temp. wody chłodzącej skraplacz"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/WlotTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="a) wlot (℃)"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/WlotEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/WylotTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="b) wylot (℃)"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/WylotEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/PowietrzeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temp. powietrza"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/PrzedTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="a) przed parownikiem (℃)"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/PrzedEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/ZaTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="b) za parownikiem (℃)"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ZaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/PotwierdzenieTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Potwierdzenie prawidłowości działania wyłączników bezpieczeństwa i ich nastaw"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/PotwierdzenieEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/GodzinyTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9. Ilość przeprowadzonych godzin przez serwis"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/GodzinyTextEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/NazwiskaTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="a) nazwiska pracowników serwisu"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/NazwiskaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/KwalifikacjaTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10. Usługa zakwalifikowana przez pracowników serwisu jako"
+                android:textAlignment="viewStart"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/PlatnaRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="płatna"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/NieplatnaRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="niepłatna"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/UwagiTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11. Uwagi i zalecenia serwisu"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/UwagiEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/UwagiKopalniaTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12. Uwagi ze strony kopalni"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/UwagiKopalniaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/WykonawcaTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wykonawca"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.github.gcacace.signaturepad.views.SignaturePad
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/WykonawcaSignaturePad"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:penColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/WyczyscWykonawcaButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="WYCZYŚĆ PODPIS"
+                android:onClick="clearWykonawcaSignature"/>
+
+            <TextView
+                android:id="@+id/ZleceniodawcaTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zleceniodawca"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.github.gcacace.signaturepad.views.SignaturePad
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/ZleceniodawcaSignaturePad"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:penColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/WyczyśćZleceniodawcaButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="WYCZYŚĆ PODPIS"
+                android:onClick="clearZleceniodawcaSignature"/>
+
+            <Button
+                android:id="@+id/ButtonWyslij"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="sendMessage"
+                android:text="ZATWIERDŹ I WYŚLIJ" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
